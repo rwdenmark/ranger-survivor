@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ranger Survivor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hud">
+    <span class="hud-label">Kills</span>
+    <span id="kill-count" class="hud-value">0</span>
+    <span class="hud-divider"></span>
+    <span class="hud-label">Time</span>
+    <span id="time-value" class="hud-value">0s</span>
+  </header>
+
+  <main class="stage">
+    <canvas id="game" width="512" height="512" tabindex="0"></canvas>
+    <div id="overlay" class="overlay">
+      <h1 id="overlay-title">Ranger Survivor</h1>
+      <p id="overlay-text">Move with WASD. Shoot with the arrow keys.</p>
+
+      <div id="score-form" class="score-form hidden">
+        <input id="player-name" class="name-input" type="text" maxlength="24" placeholder="Enter your name" autocomplete="off">
+        <button id="submit-score-button" class="overlay-secondary">Submit score</button>
+      </div>
+
+      <button id="overlay-button">Start</button>
+
+      <section id="leaderboard-section" class="leaderboard-section">
+        <h2 class="leaderboard-title">Leaderboard</h2>
+        <ol id="leaderboard-list" class="leaderboard-list"></ol>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>
