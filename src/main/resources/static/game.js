@@ -207,7 +207,7 @@ let scoreAlreadySubmitted = false;
 // overlay's leaderboard list. Silently no-ops on network failure.
 async function refreshLeaderboard() {
   try {
-    const res = await fetch("/api/scores/top?limit=5");
+    const res = await fetch("api/scores/top?limit=5");
     if (!res.ok) throw new Error("HTTP " + res.status);
     const scores = await res.json();
     renderLeaderboard(scores);
@@ -251,7 +251,7 @@ async function submitScore() {
   submitScoreButton.disabled = true;
   submitScoreButton.textContent = "Submitting…";
   try {
-    const res = await fetch("/api/scores", {
+    const res = await fetch("api/scores", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

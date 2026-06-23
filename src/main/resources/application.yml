@@ -23,6 +23,10 @@ spring:
 
 server:
   port: ${PORT:8080}
+  # Empty by default (root, e.g. on Render). Set APP_BASE_PATH=/ranger to serve under
+  # a subpath behind the Tailscale Funnel path mapping.
+  servlet:
+    context-path: ${APP_BASE_PATH:}
 
 ---
 spring:
