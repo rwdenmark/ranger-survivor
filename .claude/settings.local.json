@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(mvn *)",
+      "PowerShell(Get-NetTCPConnection *)",
+      "PowerShell(Get-Process *)"
+    ]
+  }
+}
